@@ -11,6 +11,16 @@ variable "aws_lab_ami" {
   default = "ami-01eb71e14cef400e2"
 }
 
+variable "tag_lab_vpc" {
+  description = "def image ami in main.tf"
+  default = "lab-vpc-name"
+}
+
+variable "tag_lab_subnet1" {
+  description = "def image ami in main.tf"
+  default = "lab-subnet1-name"
+}
+
 variable "aws_lab_instance_type" {
   description = "def instance type name in main.tf"
   default = "t2.micro"

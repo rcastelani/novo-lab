@@ -16,6 +16,9 @@ resource "aws_vpc" "vpc-lab" {
   instance_tenancy     = "default"
   enable_dns_hostnames = true
   name                 = "vpc-lab"
+    tags = {
+    Name = var.tag_lab_vpc
+  }
 }
 
 ## Create Subnets ##
@@ -24,6 +27,9 @@ resource "aws_subnet" "subnet_1-lab" {
   cidr_block        = "10.0.1.0/24"
   availability_zone = "sa-east-1a"
   name              = "subnet1-lab"
+    tags = {
+    Name = var.tag_lab_subnet1
+  }
 }
 
 resource "aws_security_group" "nginx" {
